@@ -1,13 +1,12 @@
-const states = require('./index');
-
-let statesAbbrList;
-
-beforeEach(() => {
-  statesAbbrList = states.getStatesAbbrList();
-});
+const state = require('./index');
 
 describe('getStatesAbbrList', () => {
+  let statesAbbr;
+  beforeEach(() => {
+      statesAbbr = state.getStatesAbbrList();
+  });
+
   it('should return list of abbreviations', () => {
-    expect(statesAbbrList).toBeDefined();
+    expect(statesAbbr).toBeDefined();
   });
 });
